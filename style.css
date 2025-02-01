@@ -1,0 +1,92 @@
+body{
+    font-family:sans-serif;
+    background-color: rgb(12, 12, 78);
+
+}
+.long{
+    width: 95px;
+    text-align: center;
+}
+h1{
+    color: aqua;
+    text-align: center;
+}
+header{ 
+
+text-align: center;
+}
+.static{
+    color: rgb(64, 255, 0);
+}
+h2{
+  color: rgb(64, 255, 0);
+
+
+}
+.Relic{
+    float: left;
+
+
+
+}
+.RelicExclamation{
+    width: 100px;
+    
+
+
+}
+.net{
+    color: rgb(64, 255, 0); ;
+
+
+}
+._{
+    color: rgba(195, 255, 175, 0.858); ; 
+
+
+
+
+
+}
+h3{
+    
+color:  rgb(64, 255, 0);
+
+
+}
+.sw{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+
+
+}
+figcaption{
+color: cyan;
+   
+}
+h4{
+color: cyan;
+
+
+}
+main , footer{
+    padding: 0% 10%;
+}
+.r{
+width: 400px;
+height: 293px;
+
+}
+.eee{
+text-decoration: none;
+padding: 10px;
+color: gold;
+border-radius:20px;
+border-color: rgba(39, 145, 127, 0.785);
+border: 3px solid gold ;
+margin: 20px auto;
+display: block;
+width: 200px;
+
+}
+
