@@ -1,92 +1,426 @@
-body{
-    font-family:sans-serif;
-    background-color: rgb(12, 12, 78);
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.long{
-    width: 95px;
-    text-align: center;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0c0c4e 0%, #1a1a5e 50%, #0c0c4e 100%);
+    color: rgba(195, 255, 175, 0.85);
+    min-height: 100vh;
+    line-height: 1.6;
 }
-h1{
-    color: aqua;
-    text-align: center;
+
+header {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid aqua;
 }
-header{ 
 
-text-align: center;
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-.static{
-    color: rgb(64, 255, 0);
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, aqua, lime);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
 }
-h2{
-  color: rgb(64, 255, 0);
 
-
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-.Relic{
-    float: left;
 
-
-
-}
-.RelicExclamation{
-    width: 100px;
-    
-
-
-}
-.net{
-    color: rgb(64, 255, 0); ;
-
-
-}
-._{
-    color: rgba(195, 255, 175, 0.858); ; 
-
-
-
-
-
-}
-h3{
-    
-color:  rgb(64, 255, 0);
-
-
-}
-.sw{
+nav a {
+    color: rgba(195, 255, 175, 0.85);
     text-decoration: none;
-    color: rgb(255, 0, 0);
-
-
-}
-figcaption{
-color: cyan;
-   
-}
-h4{
-color: cyan;
-
-
-}
-main , footer{
-    padding: 0% 10%;
-}
-.r{
-width: 400px;
-height: 293px;
-
-}
-.eee{
-text-decoration: none;
-padding: 10px;
-color: gold;
-border-radius:20px;
-border-color: rgba(39, 145, 127, 0.785);
-border: 3px solid gold ;
-margin: 20px auto;
-display: block;
-width: 200px;
-
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: lime;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.play-btn {
+    background: linear-gradient(135deg, #00ff00, #00cccc);
+    color: #0c0c4e;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+}
+
+
+main {
+    padding-top: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: aqua;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    border-left: 4px solid lime;
+    padding-left: 1rem;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(0,255,255,0.1)"/></svg>');
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+
+.search-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 2px solid aqua;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgba(195, 255, 175, 0.85);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+#search-input::placeholder {
+    color: rgba(195, 255, 175, 0.5);
+}
+
+
+.relic-card {
+    background: linear-gradient(135deg, rgba(0, 100, 100, 0.3), rgba(0, 50, 100, 0.3));
+    border: 2px solid aqua;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.relic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+}
+
+.relic-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.relic-stat {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.relic-stat .value {
+    font-size: 1.5rem;
+    color: lime;
+    font-weight: 700;
+}
+
+.relic-stat .label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.random-enchant-display {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#enchantments-grid, #exalted-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.enchant-card {
+    background: linear-gradient(135deg, rgba(20, 20, 80, 0.8), rgba(10, 10, 60, 0.8));
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.enchant-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.enchant-card:hover::before {
+    left: 100%;
+}
+
+.enchant-card:hover {
+    border-color: lime;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+}
+
+.enchant-card.hidden {
+    display: none;
+}
+
+.enchant-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    color: aqua;
+    margin-bottom: 0.5rem;
+}
+
+.enchant-rarity {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.rarity-common { background: #888; color: #fff; }
+.rarity-uncommon { background: #4a4; color: #fff; }
+.rarity-rare { background: #44a; color: #fff; }
+.rarity-epic { background: #a4a; color: #fff; }
+.rarity-legendary { background: linear-gradient(90deg, #fa0, #f50); color: #fff; }
+.rarity-mythic { background: linear-gradient(90deg, #f0f, #0ff); color: #fff; }
+.rarity-exalted { background: linear-gradient(90deg, #ff0, #0f0, #0ff); color: #000; }
+
+.enchant-desc {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.enchant-chance {
+    font-size: 0.85rem;
+    color: lime;
+    font-weight: 500;
+}
+
+
+#exalted {
+    background: linear-gradient(135deg, rgba(100, 50, 0, 0.2), rgba(50, 100, 50, 0.2));
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#exalted h2 {
+    color: gold;
+    border-left-color: gold;
+}
+
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid aqua;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: lime;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-top: 2px solid aqua;
+}
+
+footer p {
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #enchantments-grid, #exalted-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .relic-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.6); }
+}
+
+.glow-effect {
+    animation: glow 2s infinite;
+}
+
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, aqua, lime);
+    color: #0c0c4e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top:hover {
+    transform: scale(1.1);
+}
+
+.scroll-top.visible {
+    display: flex;
+}
